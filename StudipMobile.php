@@ -79,7 +79,7 @@ class StudipMobile extends StudipPlugin implements SystemPlugin
 
         // you shall not redirect from plugins.php
         $script = basename($_SERVER['PHP_SELF'], '.php');
-        if ($script === 'plugins') {
+        if (in_array($script, words('api plugins'))) {
             return false;
         }
 
