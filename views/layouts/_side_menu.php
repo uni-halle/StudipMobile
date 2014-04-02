@@ -46,7 +46,7 @@
       </li>
 
       <li data-icon="false">
-        <a href="mailto:kursmanager@uos.de?subject=Stud.IP Mobile Feedback" class="externallink contentLink" data-ajax="false">
+        <a href="mailto:admin@studip.de?subject=Stud.IP Mobile Feedback" class="externallink contentLink" data-ajax="false">
           <img src="<?= $plugin_path ?>/public/images/quickdial/bw/info-circle.png"   class="ui-li-icon ui-corner-none" />
           <?=_("Feedback")?>
         </a>
