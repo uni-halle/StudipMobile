@@ -4,6 +4,17 @@
   margin-top: -15px;
 }
 
+/* Controller: courses-files */
+#files .file-size {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+#files .new-content:before {
+  color: #FF0000;
+  content: "NEW";
+}
 
 /* misc */
 
