@@ -152,7 +152,7 @@ class Course {
         $query ="SELECT *
                  FROM dokumente
                  WHERE seminar_id =  '$id'
-                 ORDER BY mkdate DESC
+                 ORDER BY chdate DESC
                  LIMIT 0,30";
 
         $result = $db->query($query);
@@ -209,6 +209,7 @@ class Course {
                     'author_id'     => $row['user_id'],
                     'description'   => $row['description'],
                     'mkdate'        => $row['mkdate'],
+                    'chdate'        => $row['chdate'],
                     'filesize'      => $row['filesize'],
                     'link'          => $link,
                     'filename'      => $row['filename'],
