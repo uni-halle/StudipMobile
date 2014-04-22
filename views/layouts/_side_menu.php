@@ -50,6 +50,13 @@
           <img src="<?= $plugin_path ?>/public/images/quickdial/bw/logout.png"   class="ui-li-icon ui-corner-none" />
           <?=_("Logout")?>
         </a>
-      </li>    
+      </li>
+
+      <li data-icon="false">
+        <a href="<?= URLHelper::getUrl("index.php") ?>" class="externallink contentLink" data-ajax="false">
+          <img src="<?= $plugin_path ?>/public/images/quickdial/bw/desktop.png"   class="ui-li-icon ui-corner-none" />
+          <?=_("Desktop-Ansicht")?>
+        </a>
+      </li>
     </ul>
 </div><!-- /panel -->
