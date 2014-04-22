@@ -105,7 +105,7 @@ class Helper {
     {
         return mb_convert_encoding(htmlReady($text), 'UTF-8', 'WINDOWS-1252');
     }
-    
+
     public static function fout($text)
     {
         return mb_convert_encoding(formatReady($text), 'UTF-8', 'WINDOWS-1252');
@@ -272,5 +272,10 @@ class Helper {
         }
 
         return substr($check, strlen($check)-strlen($endStr), strlen($endStr)) === $endStr;
+    }
+
+    static function isExternalLink($link)
+    {
+        return preg_match('#^(/|\w+://)#', $link);
     }
 }
