@@ -1,6 +1,6 @@
 <?
 $this->set_layout("layouts/single_page");
-$page_title = "Stud.IP - Activity Feed";
+$page_title = "Activity Feed";
 $page_id = "activities-index";
 ?>
 

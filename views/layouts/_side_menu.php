@@ -1,5 +1,5 @@
 <div data-role="panel" id="leftpanel" data-display="push" data-theme="a">
-    <h2>Menü</h2>
+    <h2>Hallo, <?= $controller->currentUser()->vorname ?>!</h2>
 
     <ul data-role="listview" data-theme="a" class="nav-search" data-inset="false" id="menu_side">
 
