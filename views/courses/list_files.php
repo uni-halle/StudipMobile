@@ -1,22 +1,27 @@
 <?
-$page_title  = "Dateien";
-$page_id     = "courses-list_files";
+$page_title = _("Alle Dateien in ") . studip_utf8encode($GLOBALS['SEM_TYPE'][$course->status]['name']);
+$additional_header = $this->render_partial("courses/_list_files_header");
+$page_id = "courses-list-files";
 $back_button = TRUE;
-$popups      = "";
+$popups = "";
 $this->set_layout("layouts/single_page");
 ?>
 
-<? if (sizeof($files)) { ?>
+<? if (!sizeof($files)) { ?>
 
-  <? if (StudipMobile::DROPBOX_ENABLED) : ?>
+  <ul data-role="listview" data-inset="true" data-theme="e">
+    <li>Zu dieser Veranstaltung sind leider keine Dateien vorhanden.</li>
+  </ul>
+
+<? } else { ?>
+
+<? if (StudipMobile::DROPBOX_ENABLED) : ?>
   <a href="<?= $controller->url_for("courses/dropfiles", $seminar_id) ?>"
      class="externallink" data-ajax="false" data-role="button"
      data-theme="b">
     Alle Dateien in meine Dropbox
   </a><br>
   <? endif ?>
-
-
 
   <ul id="files" data-role="listview" data-split-icon="info" data-split-theme="d" data-filter="true">
     <? foreach($files as $file) { ?>
@@ -50,8 +55,4 @@ $this->set_layout("layouts/single_page");
 
   <?= $popups ?>
 
-<? } else { ?>
-  <ul data-role="listview" data-inset="true" data-theme="e">
-    <li>Zu dieser Veranstaltung sind leider keine Dateien vorhanden.</li>
-  </ul>
 <? } ?>

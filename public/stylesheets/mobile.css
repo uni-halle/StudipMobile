@@ -1,3 +1,8 @@
+.ui-header .ui-title {
+  margin: .6em 10% .8em;
+}
+
+
 /* Controller: courses */
 
 #courses-show h4 {
@@ -5,15 +10,19 @@
 }
 
 /* Controller: courses-files */
-#files .file-size {
+#courses-list-files .file-size {
   font-weight: normal;
   font-style: italic;
   font-size: 0.75em;
 }
 
-#files .new-content:before {
+#courses-list-files .new-content:before {
   color: #FF0000;
   content: "NEW";
+}
+
+#courses-list-files h2.course-title {
+  font-weight: 300;
 }
 
 /* misc */
@@ -199,9 +208,19 @@ img.contact {
 
 /* Actitivities */
 
+#activities.ui-listview .ui-li-icon {
+  top: 1.3em;
+}
+
 .activity-avatar {
   padding-top: 20px;
 }
+
+#activities .author {
+  font-style: italic;
+  line-height: 16px;
+}
+
 
 .ui-icon-studip-activities {
     background-image: url('../../../../../assets/images/icons/32/lightblue/billboard.png');

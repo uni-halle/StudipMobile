@@ -6,7 +6,7 @@
       <li data-icon="false">
         <a href="<?= $controller->url_for("activities") ?>" class="externallink contentLink" data-ajax="false">
           <img src="<?= $plugin_path ?>/public/images/quickdial/bw/news.png" class="ui-li-icon ui-corner-none">
-          <?=_("Activity Stream")?>
+          <?=_("Aktivitäten")?>
         </a>
       </li>
 
