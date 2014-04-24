@@ -18,7 +18,7 @@
     <script src="<?= $plugin_path ?>/public/vendor/jquery/jquery-1.9.1.min.js"></script>
     <script src="<?= $plugin_path ?>/public/vendor/jquery.mobile.1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
-      <script src="<?= $plugin_path ?>/public/vendor/jquery.mobile/inlinelistview.js"></script>
+      <script src="<?= $plugin_path ?>/public/vendor/jquery.mobile.plugins/inlinelistview.js"></script>
 
     <!-- MAP-->
     <script src="//maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>

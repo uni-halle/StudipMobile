@@ -5,6 +5,10 @@
 
 /* Controller: courses */
 
+#courses-index .ui-listview .ui-li-icon {
+  top: 1.3em;
+}
+
 #courses-show h4 {
   margin-top: -15px;
 }
