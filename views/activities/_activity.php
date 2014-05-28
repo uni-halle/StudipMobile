@@ -1,9 +1,9 @@
-<img src="<?= $controller->url_for("avatars/show", $activity['author_id'], 'small') ?>"
-     alt="<?= Studip\Mobile\Helper::out($activity['category']) ?>"
-     class="ui-li-icon" style="padding-top: 20px">
- 
 <img src="<?= $plugin_path ?>/public/images/activities/<?= $activity['category'] ?>.png"
      alt="<?= Studip\Mobile\Helper::out($activity['category']) ?>" class="ui-li-icon">
+
+<?= Avatar::getAvatar($activity['author_id'])
+            ->getImageTag(Avatar::SMALL,
+            array("class" => "ui-li-icon activity-avatar")) ?>
 
 <h3><?= Studip\Mobile\Helper::out($activity['title']) ?></h3>
 

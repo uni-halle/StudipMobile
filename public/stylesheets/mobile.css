@@ -186,6 +186,11 @@ img.contact {
   text-align: left;
 }
 
+/* Actitivities */
+
+.activity-avatar {
+  padding-top: 20px;
+}
 
 .ui-icon-studip-activities {
     background-image: url('../../../../../assets/images/icons/32/lightblue/billboard.png');
