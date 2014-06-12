@@ -1,9 +1,33 @@
+.ui-header .ui-title {
+  margin: .6em 10% .8em;
+}
+
+
 /* Controller: courses */
+
+#courses-index .ui-listview .ui-li-icon {
+  top: 1.3em;
+}
 
 #courses-show h4 {
   margin-top: -15px;
 }
 
+/* Controller: courses-files */
+#courses-list-files .file-size {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+#courses-list-files .new-content:before {
+  color: #FF0000;
+  content: "NEW";
+}
+
+#courses-list-files h2.course-title {
+  font-weight: 300;
+}
 
 /* misc */
 
@@ -184,6 +208,21 @@ img.contact {
   white-space: normal;
   font-weight: normal;
   text-align: left;
+}
+
+/* Actitivities */
+
+#activities.ui-listview .ui-li-icon {
+  top: 1.3em;
+}
+
+.activity-avatar {
+  padding-top: 20px;
+}
+
+#activities .author {
+  font-style: italic;
+  line-height: 16px;
 }
 
 

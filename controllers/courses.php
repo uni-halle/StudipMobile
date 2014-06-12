@@ -33,6 +33,9 @@ class CoursesController extends StudipMobileAuthenticatedController
         $this->seminar_id = $id;
         // get files as array and give it to the view
         $this->files = Course::find_files($id, $this->currentUser()->id);
+
+        // mark as visited
+        object_set_visit($id, 'documents');
     }
 
     function show_action( $id = NULL )

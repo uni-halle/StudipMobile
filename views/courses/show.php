@@ -65,15 +65,13 @@ $resources_locations = array_filter($resources, function ($resource) {
 <? if ($course->metadate) { ?>
 
 
+  <? if ($course->description) : ?>
     <div data-role="collapsible" data-theme="c" data-content-theme="d">
       <h3>Beschreibung</h3>
 
-      <? if ($course->description) : ?>
-          <?= \Studip\Mobile\Helper::correctText($course->description) ?>
-      <? else : ?>
-          <i><?= _("keine Beschreibung") ?></i>
-      <? endif ?>
+      <?= \Studip\Mobile\Helper::correctText($course->description) ?>
     </div>
+  <? endif ?>
 
     <? if (strlen($misc = trim($this->render_partial('courses/_show_misc')))) : ?>
         <div data-role="collapsible" data-theme="c" data-content-theme="d">
@@ -99,7 +97,7 @@ $resources_locations = array_filter($resources, function ($resource) {
             Karte
         </a>
     <? } else { ?>
-        <a href="#" data-role="button">keine Karte</a>
+        <button disabled="">keine Karte</button>
     <? } ?>
   </div>
 
