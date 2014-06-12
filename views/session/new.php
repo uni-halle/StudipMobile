@@ -12,6 +12,12 @@ $desktop_url = URLHelper::getLink($GLOBALS['ABSOLUTE_URI_STUDIP'], array(StudipM
   <div data-role="content">
 
     <center><img src="<?=$plugin_path ?>/public/images/logo.png" style="border:0;width:80%"></center>
+    <? if($flash['failed_login']) :?>
+       <div data-role="collapsible" data-theme="e" data-content-theme="e">
+          <h3><?=_("Der Login-Vorgang war nicht erfolgreich.")?></h3>
+          <p><?=_("Bitte geben Sie einen korrekten Nutzernamen und Passwort ein.")?></p>
+       </div>
+    <? endif;?>
 
     <form action="<?= $controller->url_for('session/create') ?>" method="post" data-ajax="false">
       <div data-role="fieldcontain">
