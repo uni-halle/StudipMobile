@@ -11,6 +11,11 @@ class StudipMobile extends StudipPlugin implements SystemPlugin
     public function __construct() {
         parent::__construct();
 
+        //Navigationspunkt in Linkliste zum nachträglichen aktivieren der mobilen Ansicht
+        $mobile = new Navigation(_("Mobile Ansicht"));
+        $mobile->setURL(PluginEngine::getLink($this, null, '', true));
+        Navigation::insertItem('/links/mobile/', $mobile, 'support');
+        
         if (self::AUTOMATIC_REDIRECT) {
             $this->redirectToMobile();
         }
