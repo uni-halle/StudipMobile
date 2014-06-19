@@ -55,7 +55,7 @@
       <li data-icon="false">
         <a href="<?= URLHelper::getLink($GLOBALS['ABSOLUTE_URI_STUDIP'], array(StudipMobile::REDIRECTION_STOP_WORD => 1)) ?>" class="externallink contentLink" data-ajax="false">
           <img src="<?= $plugin_path ?>/public/images/quickdial/bw/profile.png"   class="ui-li-icon ui-corner-none" />
-          <?=_("normale Ansicht")?>
+          <?=_("Zur Webansicht")?>
         </a>
       </li>
       
