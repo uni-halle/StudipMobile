@@ -9,9 +9,7 @@
     <link rel="apple-touch-icon" href="<?= $plugin_path ?>/public/images/quickdial/ios.png" type="image/gif" />
 
     <link rel="stylesheet" href="<?= $plugin_path ?>/public/vendor/jquery.mobile.1.3.2/jquery.mobile-1.3.2.min.css" />
-    <!--
     <link rel="stylesheet" href="<?= $plugin_path ?>/public/vendor/jquery.mobile.themes/studip.css" />
-    -->
     <link rel="stylesheet" href="<?= $plugin_path ?>/public/stylesheets/mobile.css" />
     <link rel="stylesheet"  href="<?= $plugin_path ?>/public/stylesheets/jquery.swipeButton.css" />
 
