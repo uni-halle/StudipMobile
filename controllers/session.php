@@ -38,6 +38,7 @@ class SessionController extends StudipMobileController
         if (!isset($result) || $result['uid'] === false) {
             $this->flash["notice"] = "login unsuccessful!";
             \NotificationCenter::postNotification('mobile.SessionDidNotCreate', $this);
+            $this->flash["failed_login"] = true;
             $this->redirect("session/new");
             return;
         }

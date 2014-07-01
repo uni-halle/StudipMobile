@@ -1,14 +1,38 @@
-<img src="<?= $controller->url_for("avatars/show", $activity['author_id'], 'small') ?>"
-     alt="<?= Studip\Mobile\Helper::out($activity['category']) ?>"
-     class="ui-li-icon" style="padding-top: 20px">
- 
+<?
+use Studip\Mobile\Helper as Helper;
+?>
+
+<? if (!empty($activity["link"])) { ?>
+
+  <? if (Helper::isExternalLink($activity['link'])) : ?>
+    <a href="<?= $activity['link'] ?>"
+       class="externallink"
+       data-ajax="false">
+
+  <? else : ?>
+    <a href="<?= $controller->url_for($activity['link']) ?>">
+  <? endif ?>
+
+<? } ?>
+
 <img src="<?= $plugin_path ?>/public/images/activities/<?= $activity['category'] ?>.png"
-     alt="<?= Studip\Mobile\Helper::out($activity['category']) ?>" class="ui-li-icon">
+     alt="<?= $categories[$activity['category']] ?>"
+     class="ui-li-icon">
 
-<h3><?= Studip\Mobile\Helper::out($activity['title']) ?></h3>
+<?= Avatar::getAvatar($activity['author_id'])
+            ->getImageTag(Avatar::SMALL,
+            array("class" => "ui-li-icon activity-avatar")) ?>
 
-<p><strong><?= Studip\Mobile\Helper::out($activity['author']) ?></strong></p>
+<h3><?= Helper::out($activity['title']) ?></h3>
 
-<p><?= Studip\Mobile\Helper::out($activity['content']) ?></p>
+<p class=author>
+  <?= _("von") ?> <?= Helper::out($activity['author']) ?>
+</p>
 
-<p class="ui-li-aside"><strong><?= Studip\Mobile\Helper::out($activity['readableTime']) ?></strong></p>
+<p class=summary>
+  <?= Helper::out($activity['content']) ?>
+</p>
+
+<? if (!empty($activity["link"])){ ?>
+  </a>
+<? } ?>

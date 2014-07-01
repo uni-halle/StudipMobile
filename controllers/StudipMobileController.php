@@ -93,6 +93,10 @@ class StudipMobileController extends Trails_Controller
 
     function url_for($to)
     {
+        if (Studip\Mobile\Helper::isExternalLink($to)) {
+            return $to;
+        }
+
         $args = func_get_args();
 
         # find params

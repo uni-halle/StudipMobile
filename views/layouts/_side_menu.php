@@ -1,19 +1,19 @@
 <div data-role="panel" id="leftpanel" data-display="push" data-theme="a">
-    <h2>Menü</h2>
+    <h2>Hallo, <?= $controller->currentUser()->vorname ?>!</h2>
 
     <ul data-role="listview" data-theme="a" class="nav-search" data-inset="false" id="menu_side">
 
-      <li class="active" data-icon="false">
-        <a href="<?= $controller->url_for("quickdial") ?>" class="externallink contentLink" data-ajax="false">
-          <img src="<?= $plugin_path ?>/public/images/quickdial/bw/quick.png" class="ui-li-icon ui-corner-none">
-          <?=_("Start")?>
-        </a>
-      </li>
+     <li class="active" data-icon="false">
+       <a href="<?= $controller->url_for("quickdial") ?>" class="externallink contentLink" data-ajax="false">
+         <img src="<?= $plugin_path ?>/public/images/quickdial/bw/quick.png" class="ui-li-icon ui-corner-none">
+<?=_("Start")?>
+       </a>
+     </li>
 
       <li data-icon="false">
         <a href="<?= $controller->url_for("activities") ?>" class="externallink contentLink" data-ajax="false">
           <img src="<?= $plugin_path ?>/public/images/quickdial/bw/news.png" class="ui-li-icon ui-corner-none">
-          <?=_("Activity Stream")?>
+          <?=_("Aktivitäten")?>
         </a>
       </li>
 
@@ -64,6 +64,13 @@
           <img src="<?= $plugin_path ?>/public/images/quickdial/bw/logout.png"   class="ui-li-icon ui-corner-none" />
           <?=_("Logout")?>
         </a>
-      </li>    
+      </li>
+
+      <li data-icon="false">
+        <a href="<?= URLHelper::getUrl("index.php") ?>" class="externallink contentLink" data-ajax="false">
+          <img src="<?= $plugin_path ?>/public/images/quickdial/bw/desktop.png"   class="ui-li-icon ui-corner-none" />
+          <?=_("Desktop-Ansicht")?>
+        </a>
+      </li>
     </ul>
 </div><!-- /panel -->
